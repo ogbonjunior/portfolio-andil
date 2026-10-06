@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de OGBON JUNIOR, développeur web full stack junior à Porto-Novo, Bénin.">
+  <meta property="og:title" content="OGBON JUNIOR — Développeur Web Full Stack Junior">
+  <meta property="og:description" content="Portfolio de OGBON JUNIOR, développeur web full stack junior à Porto-Novo, Bénin.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>OGBON JUNIOR — Développeur Web Full Stack Junior</title>
+  <!-- Favicon -->
+    <link rel="icon" href="favicon/favicon.ico" sizes="48x48">
+    <link rel="icon" href="favicon/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="favicon/favicon-192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="projects-data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <div class="page-loader" aria-hidden="true"><span>OGBON JUNIOR</span><i></i></div>
+
+  <!-- Navigation principale -->
+  <header class="site-header" id="site-header">
+    <a class="brand" href="#accueil" aria-label="Retour à l'accueil"><span>OJ</span> OGBON JUNIOR</a>
+    <nav class="desktop-nav" aria-label="Navigation principale">
+      <a href="#accueil" class="active">Accueil</a><a href="#apropos">À propos</a><a href="#competences">Compétences</a><a href="#projets">Projets</a><a href="#experience">Expérience</a><a href="#services">Services</a>
+    </nav>
+    <a class="header-contact" href="#contact">Parlons-nous <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu"><i></i><i></i><i></i></button>
+  </header>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Navigation mobile" aria-hidden="true">
+    <a href="#accueil">Accueil</a><a href="#apropos">À propos</a><a href="#competences">Compétences</a><a href="#projets">Projets</a><a href="#experience">Expérience</a><a href="#services">Services</a><a href="#contact">Contact</a>
+  </nav>
+
+  <main id="main">
+    <!-- Accueil : portrait et identité -->
+    <section class="hero" id="accueil" aria-labelledby="hero-title">
+      <div class="hero-orbit" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow reveal">Développeur web · Porto-Novo, Bénin</p>
+        <h1 id="hero-title" class="hero-title"><span>OGBON</span><span class="accent">JUNIOR</span></h1>
+        <p class="hero-role reveal">DÉVELOPPEUR WEB FULL STACK JUNIOR</p>
+        <blockquote class="hero-slogan reveal">« Le numérique évolue chaque jour.<br>Évoluons avec lui. »</blockquote>
+      </div>
+      <div class="hero-portrait reveal-image">
+        <span class="portrait-label">Étudiant en systèmes<br>informatiques et logiciels</span>
+        <img src="images/profile/ogbon-junior.png" alt="Portrait de OGBON Junior" width="1024" height="1024">
+      </div>
+      <div class="hero-bottom reveal">
+        <p>J'aide les entrepreneurs, commerçants et créateurs qui n'ont pas encore une présence en ligne à la hauteur de leur travail à obtenir un site web professionnel, prêt à impressionner et à vendre pour eux, sans lever le petit doigt.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#projets">Découvrir mes projets <span>↘</span></a><a class="text-link" href="documents/CV-OGBON-Junior.pdf" download="CV-OGBON-Junior.pdf">Télécharger mon CV <span>↓</span></a></div>
+      </div>
+      <p class="hero-ghost" aria-hidden="true">OGBON</p>
+    </section>
+
+    <!-- À propos -->
+    <section class="section about" id="apropos" aria-labelledby="about-title">
+      <div class="section-index reveal">01 — À PROPOS</div>
+      <div class="about-layout">
+        <h2 id="about-title" class="display-title reveal-lines">J'apprends.<br>Je conçois.<br><span>Je progresse.</span></h2>
+        <div class="about-copy reveal">
+          <p class="lead">Étudiant en Licence de Systèmes Informatiques et Logiciels, je me forme au développement web avec l'ambition de créer des solutions numériques utiles et accessibles.</p>
+          <p>Passionné par le web et intéressé par l'intelligence artificielle, j'avance avec curiosité, autonomie et une forte capacité d'apprentissage. J'apprécie le travail d'équipe, la créativité et les projets qui me poussent à aller plus loin.</p>
+          <dl class="facts">
+            <div><dt>Formation actuelle</dt><dd>Licence SIL — en cours</dd></div>
+            <div><dt>Formation web</dt><dd>LABIS Porto-Novo — 2025</dd></div>
+            <div><dt>Initiation IA</dt><dd>AIESEC in Porto-Novo</dd></div>
+            <div><dt>Localisation</dt><dd>Adjarra, Porto-Novo, Bénin</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compétences : la ligne verticale est animée au défilement -->
+    <section class="section skills" id="competences" aria-labelledby="skills-title">
+      <div class="section-index reveal">02 — COMPÉTENCES</div>
+      <div class="section-heading"><h2 id="skills-title" class="display-title reveal-lines">Des bases solides.<br><span>Une pratique en mouvement.</span></h2><p class="reveal">Une sélection volontairement précise des technologies et outils que j'utilise.</p></div>
+      <div class="skills-path" data-line-progress>
+        <span class="path-line" aria-hidden="true"></span>
+        <article class="skill-row reveal"><span class="path-node" aria-hidden="true"></span><p class="skill-number">01</p><h3>FRONTEND</h3><ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></article>
+        <!-- <article class="skill-row reveal"><span class="path-node" aria-hidden="true"></span><p class="skill-number">02</p><h3>BACKEND</h3><ul><li>PHP</li><li>SQL</li><li>MySQL</li></ul></article> -->
+        <article class="skill-row reveal"><span class="path-node" aria-hidden="true"></span><p class="skill-number">02</p><h3>OUTILS</h3><ul>
+          <!-- <li>Git</li><li>Laragon</li> -->
+          <li>GitHub</li><li>Visual Studio Code</li></ul></article>
+      </div>
+    </section>
+
+    <!-- Projets alimentés par projects-data.js : aucun projet fictif -->
+    <section class="section projects" id="projets" aria-labelledby="projects-title">
+      <div class="section-index reveal">03 — PROJETS</div>
+      <div class="section-heading"><h2 id="projects-title" class="display-title reveal-lines">Travaux<br><span>sélectionnés.</span></h2><p class="reveal">Tous les projets sont réunis ici, sans distinction entre travaux personnels, universitaires, stages ou missions. Les projets affichés actuellement sont des <strong>projets sur lesquels j'ai travaillés.</p></div>
+      <div class="projects-list" id="projects-list"></div>
+    </section>
+
+    <!-- Expériences : même source de données et même page de détail -->
+    <section class="section experience" id="experience" aria-labelledby="experience-title">
+      <div class="section-index reveal">04 — EXPÉRIENCE</div>
+      <div class="section-heading"><h2 id="experience-title" class="display-title reveal-lines">Apprendre<br><span>en faisant.</span></h2><p class="reveal">Choisissez une catégorie pour filtrer les projets correspondants.</p></div>
+      <div class="experience-list" id="experience-list"></div>
+    </section>
+
+    <!-- Services -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="section-index reveal">05 — SERVICES</div>
+      <div class="section-heading"><h2 id="services-title" class="display-title reveal-lines">Construire une présence<br><span>qui travaille pour vous.</span></h2></div>
+      <ol class="service-list">
+        <li class="reveal"><span>01</span><h3>Création de sites web professionnels</h3><p>Une présence claire, crédible et adaptée à votre activité.</p></li>
+        <li class="reveal"><span>02</span><h3>Développement frontend</h3><p>Des interfaces soignées, accessibles et adaptées à chaque écran.</p></li>
+        <!-- <li class="reveal"><span>03</span><h3>Développement backend</h3><p>La logique nécessaire au fonctionnement de votre projet web.</p></li>
+        <li class="reveal"><span>04</span><h3>Création de sites web dynamiques</h3><p>Des contenus et fonctionnalités qui évoluent avec vos besoins.</p></li>
+        <li class="reveal"><span>05</span><h3>Intégration de bases de données</h3><p>Organisation et connexion des données utiles à votre site.</p></li> -->
+        <!-- <li class="reveal"><span>06</span><h3>Maintenance et amélioration</h3><p>Corrections, ajustements et évolution de sites existants.</p></li> -->
+      </ol>
+    </section>
+
+    <!-- Contact : formulaire connecté à Web3Forms (service tiers, aucun backend propre requis) -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="section-index light reveal">06 — CONTACT</div>
+      <h2 id="contact-title" class="contact-title reveal-lines">Une idée à mettre<br><span>en ligne ?</span></h2>
+      <div class="contact-grid">
+        <div class="contact-details reveal">
+          <p class="contact-intro">Parlons de votre projet et de la meilleure manière de le rendre concret.</p>
+          <a href="mailto:ogbonjunior2008@gmail.com">ogbonjunior2008@gmail.com <span>↗</span></a>
+          <a href="tel:+2290154119408">(+229) 01 54 11 94 08</a>
+          <a href="tel:+2290143839303">(+229) 01 93 87 73 81</a>
+          <p class="contact-location">Adjarra, Porto-Novo, Bénin</p>
+          <div class="social-links" id="social-links">
+            <a id="link-facebook-profile" href="https://www.facebook.com/ogbon.junior" target="_blank" rel="noopener noreferrer">Profil Facebook <span>↗</span></a>
+            <a id="link-facebook-page" href="https://www.facebook.com/profile.php?id=61594265221398" target="_blank" rel="noopener noreferrer">Page Facebook <span>↗</span></a>
+            <a id="link-whatsapp-contact" href="#" target="_blank" rel="noopener noreferrer">WhatsApp <span>↗</span></a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <!-- Piège à robots (honeypot) : champ invisible pour les humains, rempli seulement par les bots -->
+          <div class="field-honeypot" aria-hidden="true">
+            <label for="botcheck">Ne pas remplir ce champ</label>
+            <input type="text" id="botcheck" name="botcheck" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="field">
+            <label for="name">Nom complet</label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-required="true" aria-describedby="name-error">
+            <span class="field-error" id="name-error" role="alert"></span>
+          </div>
+
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required aria-required="true" aria-describedby="email-error">
+            <span class="field-error" id="email-error" role="alert"></span>
+          </div>
+
+          <div class="field">
+            <label for="whatsapp">Numéro WhatsApp</label>
+            <input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" placeholder="Votre numéro WhatsApp" required aria-required="true" aria-describedby="whatsapp-help whatsapp-error">
+            <span class="field-help" id="whatsapp-help">Ajoutez votre numéro WhatsApp afin que nous puissions vous recontacter si nécessaire.</span>
+            <span class="field-error" id="whatsapp-error" role="alert"></span>
+          </div>
+
+          <div class="field">
+            <label for="subject">Sujet</label>
+            <input id="subject" name="subject" type="text" required aria-required="true" aria-describedby="subject-error">
+            <span class="field-error" id="subject-error" role="alert"></span>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="7" required aria-required="true" aria-describedby="message-error"></textarea>
+            <span class="field-error" id="message-error" role="alert"></span>
+          </div>
+
+          <button class="button button-light" type="submit" id="contact-submit"><span class="btn-label">Envoyer le message</span> <span aria-hidden="true">↗</span></button>
+          <p class="form-note" id="form-note">Nous répondons habituellement dans un délai de 12 heures.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Zone de notification après envoi (succès ou échec) -->
+  <div class="toast-region" id="toast-region" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <footer class="footer">
+    <div class="footer-brand"><strong>OGBON JUNIOR</strong><p>« Le numérique évolue chaque jour. Évoluons avec lui. »</p></div>
+    <nav aria-label="Navigation du pied de page"><a href="#accueil">Accueil</a><a href="#apropos">À propos</a><a href="#competences">Compétences</a><a href="#projets">Projets</a><a href="#contact">Contact</a></nav>
+    <div class="footer-contact"><a href="mailto:ogbonjunior2008@gmail.com">E-mail</a><a id="footer-link-facebook" href="https://www.facebook.com/ogbon.junior" target="_blank" rel="noopener noreferrer">Facebook</a><a id="footer-link-whatsapp" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a></div>
+    <p class="copyright">© <span id="year"></span> OGBON JUNIOR. Tous droits réservés.</p>
+  </footer>
+
+  <button class="whatsapp-float" id="whatsapp-button" type="button" aria-label="Contacter OGBON Junior sur WhatsApp"><span>WA</span><small>WhatsApp</small></button>
+</body>
+</html>
