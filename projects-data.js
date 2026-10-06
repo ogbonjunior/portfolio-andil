@@ -72,8 +72,8 @@ window.PORTFOLIO_PROJECTS = [
       "Portfolio personnel conçu pour présenter mon parcours, mes compétences, mes réalisations, mes services et mes coordonnées professionnelles en tant qu'étudiant en Systèmes Informatiques et Logiciels et développeur web junior.",
     technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
     // À MODIFIER : remplacez les deux adresses ci-dessous par les vraies (dépôt GitHub du portfolio et site publié).
-    demoUrl: "https://MON-SITE-DEMO-A-REMPLACER.netlify.app",
-    githubUrl: "https://github.com/REMPLACER",
+    demoUrl: "https://ogbonjunior.github.io/portfolio-andil/",
+    githubUrl: "https://github.com/ogbonjunior/portfolio-andil",
   },
   {
     id: "restaurant-la-marmite-du-benin",
