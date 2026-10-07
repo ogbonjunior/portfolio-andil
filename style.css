@@ -48,7 +48,7 @@ img { display: block; max-width: 100%; }
 .header-contact:hover { background: var(--orange); transform: translateY(-2px); }
 .menu-toggle { display: none; margin-left: auto; width: 48px; height: 48px; border: 0; border-radius: 14px; background: var(--ink); padding: 14px 12px; cursor: pointer; }
 .menu-toggle i { display: block; height: 2px; margin: 5px 0; background: var(--white); transition: .3s var(--ease); }
-.mobile-menu { position: fixed; z-index: 90; inset: 0; display: grid; align-content: center; gap: 10px; padding: 100px 28px 50px; background: var(--ink); color: var(--white); visibility: hidden; opacity: 0; transform: translateY(-20px); transition: .4s var(--ease); }
+.mobile-menu { position: fixed; z-index: 90; inset: 0; display: grid; align-content: center; gap: 10px; overflow-y: auto; padding: 100px 28px 50px; background: var(--ink); color: var(--white); visibility: hidden; opacity: 0; transform: translateY(-20px); transition: .4s var(--ease); }
 .mobile-menu a { padding: 10px 0; border-bottom: 1px solid color-mix(in srgb, var(--white) 16%, transparent); font: 800 clamp(2rem, 8vw, 3.8rem)/1 var(--display); }
 .menu-open .mobile-menu { visibility: visible; opacity: 1; transform: none; }
 .menu-open .menu-toggle i:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -156,7 +156,7 @@ img { display: block; max-width: 100%; }
 .contact-title span { color: var(--ink); }
 .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 100px; }
 .contact-intro { max-width: 480px; margin: 0 0 46px; font: 700 clamp(1.25rem, 2vw, 1.8rem)/1.4 var(--display); }
-.contact-details > a { display: flex; justify-content: space-between; max-width: 520px; padding: 17px 0; border-bottom: 1px solid color-mix(in srgb, var(--white) 35%, transparent); font-size: .78rem; font-weight: 600; }
+.contact-details > a { display: flex; justify-content: space-between; max-width: 520px; padding: 17px 0; border-bottom: 1px solid color-mix(in srgb, var(--white) 35%, transparent); font-size: .78rem; font-weight: 600; overflow-wrap: anywhere; }
 .contact-location { max-width: 520px; margin: 17px 0 0; padding-top: 17px; border-top: 1px solid color-mix(in srgb, var(--white) 35%, transparent); font-size: .78rem; font-weight: 600; }
 .social-links { display: grid; gap: 7px; max-width: 520px; margin-top: 35px; }
 .social-links a { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid color-mix(in srgb, var(--white) 25%, transparent); font-size: .68rem; font-weight: 600; color: color-mix(in srgb, var(--white) 92%, transparent); transition: color .2s; }
@@ -262,7 +262,7 @@ img { display: block; max-width: 100%; }
   .experience-row div { grid-column: 2; justify-self: start; min-width: 0; }
   .service-list li { grid-template-columns: 36px 1fr; gap: 15px; }
   .contact { padding: 90px 16px; }
-  .contact-title { margin-bottom: 60px; font-size: clamp(3.8rem, 18vw, 6.3rem); }
+  .contact-title { margin-bottom: 60px; font-size: clamp(2.8rem, 12vw, 5rem); }
   .contact-form { padding: 28px 20px; border-radius: 14px; }
   .field label { padding-bottom: 2px; }
   .contact-form .button { width: 100%; justify-self: stretch; }
@@ -281,10 +281,10 @@ img { display: block; max-width: 100%; }
 }
 
 /* ===== Grille de projets (Projets + Expérience) ===== */
-.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px 32px; border-top: 1px solid var(--line); padding-top: 46px; }
+.projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 44px 32px; border-top: 1px solid var(--line); padding-top: 46px; }
 .projects-grid .empty-state { grid-column: 1 / -1; }
-.project-card { opacity: 0; transform: translateY(18px); animation: cardIn .6s var(--ease) forwards; animation-delay: var(--d, 0ms); }
-.project-card > a { display: grid; gap: 14px; }
+.project-card { min-width: 0; opacity: 0; transform: translateY(18px); animation: cardIn .6s var(--ease) forwards; animation-delay: var(--d, 0ms); }
+.project-card > a { display: grid; min-width: 0; gap: 14px; }
 .project-card figure { position: relative; margin: 0 0 6px; aspect-ratio: 4/3; overflow: hidden; background: var(--soft); }
 .project-card figure img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
 .project-card:hover figure img { transform: scale(1.05); }
@@ -298,8 +298,8 @@ img { display: block; max-width: 100%; }
 @keyframes cardIn { to { opacity: 1; transform: none; } }
 
 /* Filtres d'expérience */
-.experience-filters { display: flex; flex-wrap: nowrap; justify-content: space-between; gap: 8px; margin-bottom: 10px; overflow-x: hidden; }
-.experience-filter { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 8px; padding: 12px 18px; border: 1px solid color-mix(in srgb, var(--white) 24%, transparent); border-radius: 999px; background: transparent; color: inherit; font: 700 .6rem/1 var(--body); letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; cursor: pointer; transition: .25s var(--ease); }
+.experience-filters { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 8px; margin-bottom: 10px; }
+.experience-filter { display: inline-flex; flex: 1 1 190px; min-width: 0; min-height: 44px; align-items: center; gap: 8px; padding: 12px 18px; border: 1px solid color-mix(in srgb, var(--white) 24%, transparent); border-radius: 18px; background: transparent; color: inherit; font: 700 .6rem/1.35 var(--body); letter-spacing: .05em; text-align: left; text-transform: uppercase; white-space: normal; cursor: pointer; transition: .25s var(--ease); }
 .experience-filter span { color: var(--orange); }
 .experience-filter:hover { border-color: var(--orange); }
 .experience-filter.is-active { background: var(--orange); border-color: var(--orange); color: var(--white); }
@@ -311,10 +311,13 @@ img { display: block; max-width: 100%; }
 .experience .empty-state small { color: color-mix(in srgb, var(--white) 50%, transparent); }
 .experience-grid.is-switching .project-card { animation: cardIn .5s var(--ease) forwards; }
 
-@media (max-width: 1080px) { .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 36px 24px; } }
+@media (max-width: 1080px) { .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 24px; } }
 @media (max-width: 760px) {
   .projects-grid { grid-template-columns: 1fr; gap: 34px; padding-top: 32px; }
-  .experience-filter { padding: 12px 16px; font-size: .58rem; }
+  .experience-filter { padding: 12px 14px; font-size: .58rem; }
   .project-card h3 { font-size: 1.25rem; }
+}
+@media (max-width: 480px) {
+  .experience-filter { flex-basis: 100%; border-radius: 14px; }
 }
 @media (prefers-reduced-motion: reduce) { .project-card { opacity: 1; transform: none; animation: none !important; } }
